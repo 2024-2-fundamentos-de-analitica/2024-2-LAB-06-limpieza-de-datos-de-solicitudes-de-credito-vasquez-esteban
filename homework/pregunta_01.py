@@ -175,8 +175,6 @@ def pregunta_01():
     df = df.dropna()
     df = no_dupe(df)
 
-    pd.DataFrame(df["barrio"].unique()).to_csv("barrios.csv", index=False)
-
     _create_ouptput_directory("files/output")
     _save_output("files/output", "solicitudes_de_credito", df)
 
